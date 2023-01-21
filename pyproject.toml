@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 numpy = ">=1.16.5"
 flavio = {git = "https://github.com/Jorge-Alda/flavio.git", branch = "jan2023"}
 wilson = "^2.3.2"
