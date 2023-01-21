@@ -25,7 +25,7 @@ setup(name='smelli',
       },
       install_requires=[
         'numpy>=1.16.5',
-        'flavio>=' + __flavio__version__,
+        'git+https://github.com/Jorge-Alda/flavio.git#42867ce64c7070901415c996801629bba378500e',
         'wilson',
         'pandas',
         'multipledispatch'

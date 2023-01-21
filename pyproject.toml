@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "smelli"
+version = "2.3.2"
+description = "A Python package providing a global likelihood function in the space of dimension-6 Wilson coefficients of the Standard Model Effective Field Theory (SMEFT)"
+authors = ["Jason Aebischer <jason.aebischer@tum.de>, Jacky Kumar <jacky.kumar@umontreal.ca>, Peter Stangl <peter.stangl@lapth.cnrs.fr>, David M. Straub <david.straub@tum.de>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = ">=1.16.5"
+flavio = {git = "https://github.com/Jorge-Alda/flavio.git", branch = "jan2023"}
+wilson = "^2.3.2"
+pandas = "^1.5.3"
+multipledispatch = "^0.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
