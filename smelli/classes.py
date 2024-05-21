@@ -18,7 +18,6 @@ from operator import itemgetter
 from numbers import Number
 import inspect
 from flavio.math.optimize import minimize_robust
-from smelli import _flavio_up_to_date
 from itertools import chain
 
 
@@ -207,10 +206,10 @@ class GlobalLikelihood(object):
                     meas_loaded = set(L.full_measurement_likelihood.get_measurements)
                     meas_missing = meas_yaml-meas_loaded
                 except AssertionError as e:
-                    to_upgrade = 'smelli' if _flavio_up_to_date else 'flavio'
+                    to_upgrade = 'smelli'
                     raise AssertionError('{}. Please upgrade {} to the latest version.'.format(e,to_upgrade))
                 if meas_missing:
-                    to_upgrade = 'smelli' if _flavio_up_to_date else 'flavio'
+                    to_upgrade = 'smelli'
                     raise AssertionError('The measurements {} have not been found. Please upgrade {} to the latest version.'.format(meas_missing,to_upgrade))
             self.fast_likelihoods[fn] = L
         for fn in self._likelihoods_yaml:
@@ -231,10 +230,10 @@ class GlobalLikelihood(object):
                     meas_loaded = set(L.measurement_likelihood.get_measurements)
                     meas_missing = meas_yaml-meas_loaded
                 except AssertionError as e:
-                    to_upgrade = 'smelli' if _flavio_up_to_date else 'flavio'
+                    to_upgrade = 'smelli'
                     raise AssertionError('{}. Please upgrade {} to the latest version.'.format(e,to_upgrade))
                 if meas_missing:
-                    to_upgrade = 'smelli' if _flavio_up_to_date else 'flavio'
+                    to_upgrade = 'smelli'
                     raise AssertionError('The measurements {} have not been found. Please upgrade {} to the latest version.'.format(meas_missing,to_upgrade))
             self.likelihoods[fn] = L
         for name, observables in self._custom_likelihoods_dict.items():
