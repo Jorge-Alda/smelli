@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 numpy = ">=1.16.5"
-flavio = {git = "https://github.com/Jorge-Alda/flavio.git", branch = "jan2023"}
+flavio = {git = "https://github.com/Jorge-Alda/flavio.git", rev = "may2024"}
 wilson = "^2.3.2"
 pandas = "^1.5.3"
 multipledispatch = "^0.6.0"
